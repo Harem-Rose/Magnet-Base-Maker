@@ -36,11 +36,12 @@ Usage Instructions:
 		2. Click Export
 		3. Save the file
 
-	For GW taper:
+	
+If you do not want to use the inverted taper and would rather use a traditional base design:
+
 		1. Go to line 101 and put a - sign in front of the 1.5 but after the = sign
 		2. when adjusting the length and width diameter, subtract 3 from your desired size (22 for 25mm, 37 for 40mm)
 		That gives you the GW taper: https://i.imgur.com/LfStFfZ.png
-
 
 
 Warning:
