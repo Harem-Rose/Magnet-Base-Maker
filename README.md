@@ -21,6 +21,7 @@ Key Features:
 		B. The widest portion of the base is towards the model which allows just a little more foot space
 
 Usage Instructions: 
+
 	You must open the .scad file in OpenSCAD
 	There are two ways to make changes to the base file generator
 		1. Modify the Editor Directly in the left pane
