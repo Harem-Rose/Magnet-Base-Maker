@@ -44,8 +44,3 @@ Usage Instructions:
 Warning:
 The program will let you add any number of magnets which may result in undesireable behavior
 If magnet studs are clipping into each other, either increase the distance to the edge. (MagnetEdgeDistancePercent) or reduce the number/size of magnets to a reasonable amount
-
-
-Seeking assistance
-If you received this on PiperMakes server: Ask @Kor'vre Har'em R'ose for assistance
-If you received this on The Hive server: Ask @Harem-Rose for assistance
