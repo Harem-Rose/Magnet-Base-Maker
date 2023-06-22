@@ -11,12 +11,10 @@ Purpose:
 	The .SCAD file is has been written to allow for the creation of custom sized bases with magnet slots.
 
 Key Features:
+
 	1. Circular or Oval bases can be made
-	
 	2. Any size can be made
-	
 	3. Magnet studs can be added for cylinder or square bases.
-	
 	4. Any number of magnet slots/studs can be added
 	5. Bases have an inverted taper. This helps in the following ways
 		A. Bases are easier to pick up off of a flat table, especially when magnetized
