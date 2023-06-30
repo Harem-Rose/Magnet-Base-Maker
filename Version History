@@ -1,0 +1,9 @@
+Version History
+v01 - Manual
+v02 - Initial SCAD version
+v03 - Increased magnet stud limit to 500. Puts studs in a circle automatically
+v04 - Automatically increase the thickness if magnets are larger than the base defaults
+v05 - Added possibility for Cubic in addition to Cylinder magnets
+v06 - Added ability to create square and hex bases
+    - Added in Glue Slots into magnet studs
+v07 - Added ability to include slots for "multibasing" on top.
