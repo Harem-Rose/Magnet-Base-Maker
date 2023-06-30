@@ -16,9 +16,7 @@ Key Features:
 	2. Any size can be made
 	3. Magnet studs can be added for cylinder or square bases.
 	4. Any number of magnet slots/studs can be added
-	5. Bases have an inverted taper. This helps in the following ways
-		A. Bases are easier to pick up off of a flat table, especially when magnetized
-		B. The widest portion of the base is towards the model which allows just a little more foot space
+	5. Bases have an option for 3 edge styles. Please see "EdgeStyles.txt"
 
 Usage Instructions: 
 
@@ -37,11 +35,17 @@ Usage Instructions:
 		3. Save the file
 
 	
-If you do not want to use the inverted taper and would rather use a traditional base design:
+There are 3 options for the style of base edge: Inverted, Traditional, Straight
 
-		1. Go to line 101 and put a - sign in front of the 1.5 but after the = sign
-		2. when adjusting the length and width diameter, subtract 3 from your desired size (22 for 25mm, 37 for 40mm)
-		That gives you the GW taper: https://i.imgur.com/LfStFfZ.png
+	1. Inverted
+		A. Bases are the specified sizes at the top of the base, nearest the model. Base Tapers inwards as the taper goes down towards the bottom/table
+		B. Bases are easier to pick up off of a flat surface, especially when magnetized
+	2. Traditional
+		A. Bases are the specified sizes at the bottom of the base, nearest the table. Base tapers inwards as the taper goes up towards the top/model
+		B. Bases more closely match traditional gaming bases like those from Games Workshop
+	3. Straight
+		A. Bases are the specified sizes from top to bottom along. There is no taper
+		B. Bases would resemble a cutout from material such as MDF or Acrylic
 
 
 Warning:
