@@ -16,7 +16,7 @@ Key Features:
 	2. Any size can be made
 	3. Magnet studs can be added for cylinder or square bases.
 	4. Any number of magnet slots/studs can be added
-	5. Bases have an option for 3 edge styles. Please see "EdgeStyles.txt"
+	5. Bases have an option for 3 edge styles. Please see "EdgeStyles.txt" document
 	6. Program can enable "MultiBase Mode", which will create slots on top of the base that other smaller bases can fit into. This can also be used to re-base minis into a larger base.
 
 Usage Instructions: 
