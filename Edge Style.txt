@@ -9,3 +9,11 @@ There are 3 options for the style of base edge: Inverted, Traditional, Straight
 	3. Straight
 		A. Bases are the specified sizes from top to bottom along. There is no taper
 		B. Bases would resemble a cutout from material such as MDF or Acrylic
+
+
+To change the base edge style:
+	1. Locate the variable "BaseStyle"
+	2. Change the line to read as one of the following (Case Sensitive):
+		BaseStyle = "Inverted";
+		BaseStyle = "Traditional";
+		BaseStyle = "Straight";
