@@ -16,7 +16,7 @@
 //Once you have modified the parameters as you desire, press F6 on your keyboard
 
 //Style of Base Edge: "Inverted","Traditional","Straight"
-BaseStyle = "Straight";
+BaseStyle = "Inverted";
 //Shape of Base: "Circle", "Square", or "Hex"
 BaseShape = "Circle";
 //Desired Length of Base. For ovals make this the largest number
@@ -30,7 +30,7 @@ MagnetEdgeDistancePercent=80;
 //Style of Magnet. "Cubic" or "Cylinder"
 MagnetStyle = "Cylinder";
 //Height of Magnet
-MagnetHeight = 1;
+MagnetHeight = 2;
 //Width of Magnet
 MagnetWidth = 3; 
 //Length of Magnet - Only for Cubic
