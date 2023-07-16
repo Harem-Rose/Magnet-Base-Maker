@@ -186,7 +186,7 @@ BracingXCutoff = MagnetStudXOffset-(MagnetWidth/2) - MagnetExtraWidth/2; //Termi
 BracingYLength = YBracingToEdge >= 1 ? (InnerDiameterBot/2) : BracingYCutoff ; //Termination point for Y braces ending at tapered edge
 BracingXLength = XBracingToEdge >= 1 ? ((InnerDiameterBot*OvalXScale)/2) : BracingXCutoff ; //Termination point for X Braces ending at tapered edge
 
-CircleEdgeFacesHidden = 0 + 40;//Hoa many edge faces should be on the outside of the magnet studs, and the inside of the hollow taper
+CCircleEdgeFacesHidden = BaseShape == "Square" ? 4 : (BaseShape == "Hex" ? 6 : 40); ;//Hoa many edge faces should be on the outside of the magnet studs, and the inside of the hollow taper
 CircleEdgeFacesMagHole = 0 + 60;//How many edge faces should the magnet holes have. Too few may cause fitment issues.
 
 //For oval bases, have 3 studs be in-line
