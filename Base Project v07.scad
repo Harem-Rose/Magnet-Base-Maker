@@ -30,7 +30,7 @@ MagnetEdgeDistancePercent=80;
 //Style of Magnet. "Cubic" or "Cylinder"
 MagnetStyle = "Cylinder";
 //Height of Magnet
-MagnetHeight = 2;
+MagnetHeight = 1;
 //Width of Magnet
 MagnetWidth = 3; 
 //Length of Magnet - Only for Cubic
@@ -77,7 +77,9 @@ MultiBaseRotate = 0; //Use to rotate where the bases are located. Can prevent ma
 //Variables for Center Dimple
 MagnetMarkerAdd = 0; //Set to 1 if you want
 MagnetMarkerType = "Dimple"; //"Dimple" for a dot, or "Through" to go all the way through the base. Through is best used to help align multibasing.
-MagnetMarkerWidth = 0.3;
+MagnetMarkerMode = "Center";//"Center" for center of base only, "Magnet" for above the magnets only. "Both" for center and Magnets"
+MagnetMarkerWidth = 3;
+
 
 
 
@@ -186,7 +188,7 @@ BracingXCutoff = MagnetStudXOffset-(MagnetWidth/2) - MagnetExtraWidth/2; //Termi
 BracingYLength = YBracingToEdge >= 1 ? (InnerDiameterBot/2) : BracingYCutoff ; //Termination point for Y braces ending at tapered edge
 BracingXLength = XBracingToEdge >= 1 ? ((InnerDiameterBot*OvalXScale)/2) : BracingXCutoff ; //Termination point for X Braces ending at tapered edge
 
-CCircleEdgeFacesHidden = BaseShape == "Square" ? 4 : (BaseShape == "Hex" ? 6 : 40); ;//Hoa many edge faces should be on the outside of the magnet studs, and the inside of the hollow taper
+CircleEdgeFacesHidden = BaseShape == "Square" ? 4 : (BaseShape == "Hex" ? 6 : 40); ;//Hoa many edge faces should be on the outside of the magnet studs, and the inside of the hollow taper
 CircleEdgeFacesMagHole = 0 + 60;//How many edge faces should the magnet holes have. Too few may cause fitment issues.
 
 //For oval bases, have 3 studs be in-line
@@ -309,7 +311,7 @@ module MultiBaseHole ()
 module MagnetStudMarker()
     {
     if(MagnetMarkerType == "Dimple" ) {sphere (r=MagnetMarkerWidth, $fn = 10);}
-    if(MagnetMarkerType == "Through") translate ([0,0,-50])cylinder (r=MagnetMarkerWidth, $fn = 10, h = 100);
+    if(MagnetMarkerType == "Through") translate ([0,0,-50])cylinder (d=MagnetMarkerWidth, $fn = 30, h = 100);
     }
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 //Code
@@ -376,9 +378,18 @@ difference()
         PegHole();
     if (MagnetMarkerAdd == 1)
             {
-            translate([sin(360*i/(MagnetStudsMax - SubtractStud))*MagnetStudXOffset, (cos(360*i/(MagnetStudsMax - SubtractStud))*MagnetStudYOffset), (0) ])
+            if (MagnetMarkerMode == "Magnet")
+                {  
+                translate([sin(360*i/(MagnetStudsMax - SubtractStud))*MagnetStudXOffset, (cos(360*i/(MagnetStudsMax - SubtractStud))*MagnetStudYOffset), (0) ])
         rotate([0,0,360*i/(MagnetStudsMax - SubtractStud)])
             MagnetStudMarker();
+                }    
+            if (MagnetMarkerMode == "Both")
+                {  
+                translate([sin(360*i/(MagnetStudsMax - SubtractStud))*MagnetStudXOffset, (cos(360*i/(MagnetStudsMax - SubtractStud))*MagnetStudYOffset), (0) ])
+        rotate([0,0,360*i/(MagnetStudsMax - SubtractStud)])
+            MagnetStudMarker();
+                }
             };
         }
     if (MakeMultiBase == 1)
@@ -397,7 +408,11 @@ difference()
         }
     if (MagnetMarkerAdd == 1)
         {
-        MagnetStudMarker();
+    if (MagnetMarkerAdd == 1)
+        {
+        if (MagnetMarkerMode == "Center")MagnetStudMarker();
+        if (MagnetMarkerMode == "Both")  MagnetStudMarker();
+        }
         }
     };  
     
