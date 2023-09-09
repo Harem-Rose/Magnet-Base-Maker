@@ -1,3 +1,6 @@
+THIS PROJECT WILL BE MOVING SOON. THE NEW LOCATION WILL BE:
+https://codeberg.org/Harem-Rose/Magnet-Base-Maker
+
 # Magnet-Base-Maker
 
 Usage Instructions for the OpenSCAD Base Builder program
