@@ -1,3 +1,5 @@
+//THIS PROJECT WILL BE MOVING SOON. THE NEW LOCATION WILL BE: https://codeberg.org/Harem-Rose/Magnet-Base-Maker
+
 //Version History
 //v01 - Manual
 //v02 - Initial SCAD version
