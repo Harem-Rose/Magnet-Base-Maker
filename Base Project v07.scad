@@ -22,9 +22,9 @@ BaseStyle = "Inverted";
 //Shape of Base: "Circle", "Square", or "Hex"
 BaseShape = "Circle";
 //Desired Length of Base. For ovals make this the largest number
-BaseLength = 25;
+BaseLength = 28.5;
 //Desired Width of Base. For ovals make this the smallest number
-BaseWidth = 25;
+BaseWidth = 28.5;
 
 
 //How far from the center should the studs be? Enter a number from 0-100. Values that are too small will result in magnet hole collisions.
@@ -32,7 +32,7 @@ MagnetEdgeDistancePercent=80;
 //Style of Magnet. "Cubic" or "Cylinder"
 MagnetStyle = "Cylinder";
 //Height of Magnet
-MagnetHeight = 1;
+MagnetHeight = 2;
 //Width of Magnet
 MagnetWidth = 3; 
 //Length of Magnet - Only for Cubic
@@ -40,7 +40,7 @@ MagnetLength = 0;
 //How many studs do you want
 MagnetStuds = 1; 
 //How wide should the glue slot be in the Magnet Stud
-SlotWidth = .5;
+SlotWidth = .75;
 
 //Add Cross Braces between magnet studs. 0 for No, 1 for Yes
 //Set to 1 to include bracing along Y axis
@@ -294,8 +294,8 @@ module PegHole () //Module for the holes. Separated from PegStud to allow these 
     if (MagnetStyle == "Cylinder")
         {
         translate([0,0,-(MagnetExtraSinkDepth)+(BaseTaperHeight-MagnetHeight)]) cylinder (h=MagnetHeight + 3, d=MagnetWidth+MagnetExtraWidth, $fn=CircleEdgeFacesMagHole);
-        rotate([0,0,45])translate([-MagnetStudTopWidth/2,-SlotWidth/2,-(MagnetExtraSinkDepth)+(BaseTaperHeight-MagnetHeight)])cube([MagnetStudTopWidth,SlotWidth,BaseFlatHeight+BaseTaperHeight+2]);  
-        rotate([0,0,45])translate([-SlotWidth/2,-MagnetStudTopWidth/2,-(MagnetExtraSinkDepth)+(BaseTaperHeight-MagnetHeight)])cube([SlotWidth,MagnetStudTopWidth,BaseFlatHeight+BaseTaperHeight+2]);   
+        rotate([0,0,45])translate([-MagnetStudTopWidth/2,-SlotWidth/2,-(MagnetExtraSinkDepth)+(BaseTaperHeight-MagnetHeight)])cube([MagnetStudTopWidth,SlotWidth,MagnetHeight+MagnetExtraSinkDepth+.1]);  
+        rotate([0,0,45])translate([-SlotWidth/2,-MagnetStudTopWidth/2,-(MagnetExtraSinkDepth)+(BaseTaperHeight-MagnetHeight)])cube([SlotWidth,MagnetStudTopWidth,MagnetHeight+MagnetExtraSinkDepth+.1]);   
         };
     if (MagnetStyle == "Cubic")
         {
